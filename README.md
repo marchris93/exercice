@@ -1,44 +1,25 @@
-# exercice
+# exercice bash setup
 
-cd users (change directory)
-cd mariachristinaantoniou
-cd dev 
-cd workspace
-mkdir exercice (create a directory)
+```
+# create project directory
+cd ~/dev/workspace # ~ is user's home
+mkdir exercice
 ll (list)
 cd exercice
-nmp init (create a package.json)
-vim package.json (view, edit the file)
- "script"
-     "dev"="vite"
-npm install -D tailwind postcss autoprefixer vite (download dependencies)
-nmp run dev (dev server running) - checking if it works
-^C
 
+# setup npm and vite
+npm init # create a package.json
+npm install -D tailwind postcss autoprefixer vite # download dependencies
+vim index.html # create & edit new index.html file 
+vim package.json # view, edit the file, add dev vite script
+nmp run dev (dev server running) - checking if it works
+
+# initiliase git
 git init
 git status
-git add node_modules/
-git commit node_modules
-
-cd ..
-ll
-ll -a (to check .git)
-
-drwxr-xr-x   6 mariachristinaantoniou  staff    192 May 20 23:27 ..
--rw-r--r--   1 mariachristinaantoniou  staff    348 May 21 11:30 package.json
--rw-r--r--   1 mariachristinaantoniou  staff  62152 May 21 11:30 package-lock.json
--rw-r--r--   1 mariachristinaantoniou  staff      0 May 21 11:30 node_module
-drwxr-xr-x  11 mariachristinaantoniou  staff    352 May 21 11:34 .git
-drwxr-xr-x   6 mariachristinaantoniou  staff    192 May 22 13:11 .
-
-touch index.html (
-ll
--rw-r--r--  1 mariachristinaantoniou  staff    348 May 21 11:30 package.json
--rw-r--r--  1 mariachristinaantoniou  staff  62152 May 21 11:30 package-lock.json
--rw-r--r--  1 mariachristinaantoniou  staff      0 May 21 11:30 node_module
--rw-r--r--  1 mariachristinaantoniou  staff      0 May 22 13:20 index.html
-
-npm run dev
-
-
-
+vim .gitignore # create and edit .gitignore file, add node_modules/ directory to new line
+git add . # add all files to git local repository
+git commit -m "initial commit"
+git remote add origin https://github.com/marchris93/exercice.git
+git push
+```
